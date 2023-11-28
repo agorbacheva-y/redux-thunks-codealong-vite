@@ -1,3 +1,9 @@
+import { useDispatch } from "react-redux";
+import { fetchTodos } from "../reducers/todos";
+
 export const FetchTodosButton = () => {
-  return <button type="button">Fetch todos!</button>;
+  const dispatch = useDispatch();
+
+  // invoke thunk
+  return <button type="button" onClick={() => dispatch(fetchTodos( ))}>Fetch todos!</button>;
 };

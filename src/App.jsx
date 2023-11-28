@@ -6,6 +6,7 @@ import { LoadingIndicator } from "./components/LoadingIndicator";
 import { TodoList } from "./components/TodoList";
 import { todos } from "./reducers/todos";
 import { ui } from "./reducers/ui";
+import Card from "./lib/Card";
 
 const reducer = combineReducers({
   ui: ui.reducer,
@@ -20,6 +21,11 @@ export const App = () => {
       <LoadingIndicator />
       <TodoList />
       <FetchTodosButton />
+      <Card 
+        title="title" 
+        secondaryText="secondary title" 
+        thumbnailUrl="https://picsum.photos/200/300" 
+      />
     </Provider>
   );
 };
