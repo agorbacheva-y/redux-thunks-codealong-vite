@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
 const Container = styled.div`
-  padding: 20px;
   border-radius: 10px;
   background: #fff;
   border: 1px solid green;
+  margin-bottom: 20px;
 `
 
 const Title = styled.h1`
@@ -31,18 +31,35 @@ const TitleBar = styled.div`
   align-items: center;
 `
 
+const CoverImage = styled.img`
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+`
 
+const Content = styled.div`
+  padding: 20px:  
+`
 
-const Card = ({ title, secondaryText, thumbnailUrl }) => {
+const ChildrenContent = styled.div`
+  background: lightgray;
+  padding: 10px;
+`
+
+const Card = ({ title, secondaryText, thumbnailUrl, coverImage, className, children }) => {
   return (
-    <Container>
-      <TitleBar>
-        {thumbnailUrl && <Thumbnail url={thumbnailUrl} />}
-        <div>
-          {title && <Title>{title}</Title>}
-          {secondaryText && <SecondaryText>{secondaryText}</SecondaryText>}
-        </div>
-      </TitleBar>
+    <Container className={className}>
+      {coverImage && <CoverImage src={coverImage} />}
+      <Content>
+        <TitleBar>
+          {thumbnailUrl && <Thumbnail url={thumbnailUrl} />}
+          <div>
+            {title && <Title>{title}</Title>}
+            {secondaryText && <SecondaryText>{secondaryText}</SecondaryText>}
+          </div>
+        </TitleBar>
+
+        {children && <ChildrenContent>{children}</ChildrenContent>}
+      </Content>
     </Container>
   );
 };
