@@ -7,6 +7,7 @@ import { TodoList } from "./components/TodoList";
 import { todos } from "./reducers/todos";
 import { ui } from "./reducers/ui";
 import Card from "./lib/Card";
+import List from "./lib/List";
 import styled from "styled-components";
 
 const reducer = combineReducers({
@@ -38,6 +39,9 @@ export const App = () => {
       <Card title="only a title" secondaryText="secondary text" />
 
       <Card>child component</Card>
+
+      <List />
+      <List />
     </Provider>
   );
 };
