@@ -27,7 +27,7 @@ export const App = () => {
     <Provider store={store}>
       <LoadingIndicator />
       <TodoList />
-      <FetchTodosButton />
+      {/* <FetchTodosButton />
       <ThinnerCard 
         title="title" 
         secondaryText="secondary title" 
@@ -38,10 +38,13 @@ export const App = () => {
 
       <Card title="only a title" secondaryText="secondary text" />
 
-      <Card>child component</Card>
+      <Card>child component</Card> */}
 
       <List />
       <List />
     </Provider>
   );
 };
+
+// material.io
+// npm install styled-components
