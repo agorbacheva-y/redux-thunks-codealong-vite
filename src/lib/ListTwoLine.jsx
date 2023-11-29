@@ -32,7 +32,7 @@ const Divider = styled.hr`
   margin: 0 1rem;
 `
 
-const List = () => {
+const ListTwoLine = () => {
   return (
     <div>
       <Container>
@@ -47,6 +47,6 @@ const List = () => {
   );
 };
 
-export default List;
+export default ListTwoLine;
 
 // https://m3.material.io/components/lists/specs
